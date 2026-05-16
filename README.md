@@ -27,7 +27,7 @@ _Um sistema de votação interativo via linha de comando (CLI) desenvolvido em P
 
 1. Clone o repositório:
    ```bash
-   git clone [https://github.com/SEU_USUARIO/NOME_DO_REPOSITORIO.git](https://github.com/SEU_USUARIO/NOME_DO_REPOSITORIO.git](https://github.com/felipe2008pg1/sistema-eleitoral/edit/main/README.md))
+   git clone (https://github.com/felipe2008pg1/sistema-eleitoral/edit/main/README.md))
    ```
 2. Navegue até a pasta do projeto:
    ```bash

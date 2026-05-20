@@ -4,7 +4,7 @@
 
 Um sistema de votação interativo e moderno desenvolvido em **Python** utilizando o micro-framework **Flask**, com persistência de dados local em formato **JSON** e interface web limpa (HTML5/CSS3).
 
-> ⚠️ **AVISO DE DESENVOLVIMENTO:** Este projeto está em fase de desenvolvimento. O processo de votação simulado atualmente é baseado no clique direto no candidato exibido na interface de usuário. Futuramente, o sistema será atualizado para refletir o sistema eleitoral real, permitindo a votação através da digitação do número do candidato em uma interface que simula uma urna eletrônica de verdade.
+> ⚠️ **AVISO DE DESENVOLVIMENTO:** Este projeto está em fase de desenvolvimento. O processo de votação simulado atualmente é baseado no clique direto no candidato exibido na interface de usuário. Futuramente, o sistema será atualizado para refletir o sistema eleitoral real, permitindo uma única votação através da digitação do número do candidato em uma interface que simula uma urna eletrônica de verdade.
 
 > ⚠️ **Aviso de Isenção de Responsabilidade:** Este projeto foi desenvolvido com fins estritamente acadêmicos e pedagógicos para estudo de arquitetura de software (Flask/Python/JSON). A aplicação não possui qualquer vínculo com partidos políticos, coligações ou candidatos reais, servindo apenas como ferramenta de aprendizado prático de programação.
 

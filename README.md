@@ -1,4 +1,4 @@
-## It was originally written in Portuguese and then translated into English.. 🇧🇷 🇺🇸
+## This project was originally written in Portuguese and then translated into English. 🇧🇷 🇺🇸
 
 # 🗳️ Web-based Electoral System - 2026 Elections
 

@@ -1,59 +1,58 @@
-## This project are avaliable just in version PT-BR. 🇧🇷
+## It was originally written in Portuguese and then translated into English.. 🇧🇷 🇺🇸
 
-# 🗳️ Sistema Eleitoral Web - Eleições 2026
+# 🗳️ Web-based Electoral System - 2026 Elections
 
-Um sistema de votação interativo e moderno desenvolvido em **Python** utilizando o micro-framework **Flask**, com persistência de dados local em formato **JSON** e interface web limpa (HTML5/CSS3).
+An interactive and modern voting system developed in **Python** using the **Flask** micro-framework, with local data persistence in *JSON* format and a clean web interface (HTML5/CSS3).
 
-> ⚠️ **AVISO DE DESENVOLVIMENTO:** Este projeto está em fase de desenvolvimento. O processo de votação simulado atualmente é baseado no clique direto no candidato exibido na interface de usuário. Futuramente, o sistema será atualizado para refletir o sistema eleitoral real, permitindo uma única votação através da digitação do número do candidato em uma interface que simula uma urna eletrônica de verdade.
+> ⚠️ **DEVELOPMENT NOTICE:** This project is under development. The simulated voting process is currently based on a direct click on the candidate displayed in the user interface. In the future, the system will be updated to reflect the real electoral system, allowing a single vote by typing the candidate's number into an interface that simulates a real electronic voting machine.
 
-> ⚠️ **Aviso de Isenção de Responsabilidade:** Este projeto foi desenvolvido com fins estritamente acadêmicos e pedagógicos para estudo de arquitetura de software (Flask/Python/JSON). A aplicação não possui qualquer vínculo com partidos políticos, coligações ou candidatos reais, servindo apenas como ferramenta de aprendizado prático de programação.
-
+> ⚠️ **Disclaimer:** This project was developed for strictly academic and educational purposes for the study of software architecture (Flask/Python/JSON). The application has no connection whatsoever with political parties, coalitions, or real candidates, serving only as a practical programming learning tool.
 ---
 
-## 🚀 Funcionalidades Atuais
+## 🚀 Current Features
 
-* **Interface Web Responsiva:** Painel escuro (*Dark Mode*) minimalista e intuitivo para computar os votos sem distrações.
-* **Arquitetura Back-End:** Servidor web local rodando rotas HTTP de forma limpa, tratando requisições `GET` (exibição) e `POST` (computação de votos).
-* **Persistência de Dados:** Os votos são gravados e atualizados em tempo real no arquivo `votos.json`. Se o servidor for desligado, nenhum dado é perdido.
-* **Ambiente Isolado:** Configuração pronta para uso com ambiente virtual (`venv`), mantendo as dependências do projeto organizadas.
+* **Responsive Web Interface:** Minimalist and intuitive dark mode panel for counting votes without distractions.
+* **Back-End Architecture:** Local web server running clean HTTP routes, handling `GET` (display) and `POST` (vote counting) requests.
+* **Data Persistence:** Votes are recorded and updated in real time in the `votes.json` file. If the server is shut down, no data is lost.
+* **Isolated Environment:** Ready-to-use configuration with a virtual environment (`venv`), keeping project dependencies organized.
 
-## 📁 Estrutura do Projeto
+## 📁 Project Structure
 
 ```text
 sistema-eleitoral-web/
 │
 ├── static/
-│   └── style.css       # Estilização e design da página (CSS)
+│   └── style.css       # Page styling and design (CSS)
 │
 ├── templates/
-│   └── index.html      # Estrutura e interface da urna (HTML)
+│   └── index.html      # Ballot box structure and interface (HTML)
 │
-├── app.py              # Servidor principal e rotas da aplicação (Flask)
-├── votos.json          # Banco de dados local onde os votos são persistidos
-└── .gitignore          # Arquivo para ignorar arquivos locais inúteis no Git
+├── app.py              # Main server and application routes (Flask)
+├── votos.json          # Local database where votes are stored.
+└── .gitignore          # File to ignore useless local files in Git
 ```
 
-## 🛠️ Tecnologias Utilizadas
+## 🛠️ Technologies Used
 
 * **Python 3.x**
 * **Flask** (Micro-framework web)
-* **JSON** (Armazenamento e persistência de dados)
+* **JSON** (Data storage and persistence)
 * **HTML5 e CSS3** (Front-End)
 
 ---
 
-## 🔧 Como Executar o Projeto Localmente
+## 🔧 How to Run the Project Locally
 
-Siga os passos abaixo no terminal do seu VS Code para rodar a aplicação:
+Follow the steps below in your VS Code terminal to run the application:
 
-### 1. Clonar o Repositório
+### 1. Clone the Repository
 ```bash
 git clone [https://github.com/felipe2008pg1/sistema-eleitoral.git](https://github.com/felipe2008pg1/sistema-eleitoral.git)
 cd sistema-eleitoral
 ```
 
-### 2. Criar e Ativar o Ambiente Virtual (venv)
-* **No Windows (PowerShell):**
+### 2. Create and Activate the Virtual Environment (venv)
+* **In Windows (PowerShell):**
   ```powershell
   python -m venv venv
   .\venv\Scripts\Activate.ps1
@@ -64,19 +63,19 @@ cd sistema-eleitoral
   source venv/bin/activate
   ```
 
-### 3. Instalar as Dependências
-Com o `(venv)` ativo no seu terminal, instale o Flask:
+### 3. Install the dependences
+With `(venv)` active in your terminal, install Flask.:
 ```bash
 pip install flask
 ```
 
-### 4. Rodar o Servidor Web
-Execute o arquivo principal do projeto:
+### 4. Run the Web Server
+Run the main project file:
 ```bash
 python app.py
 ```
 
-Após executar, abra o seu navegador e acesse o endereço local fornecido pelo terminal (geralmente `http://127.0.0.1:5000`).
+After running the program, open your browser and access the local address provided by the terminal (usually `http://127.0.0.1:5000`).
 
 ---
-Desenvolvido com foco em lógica de Back-End por [Felipe de la Vega Gonzalez](https://github.com/felipe2008pg1) 🧑‍💻
+Developed with a focus on back-end logic by [Felipe de la Vega Gonzalez](https://github.com/felipe2008pg1) 🧑‍💻

@@ -3,43 +3,42 @@ import json
 import os
 
 app = Flask(__name__)
-ARQUIVO_JSON = "votos.json"
+JSON_FILE = "votes.json"
 
-def carregar_dados():
-    if not os.path.exists(ARQUIVO_JSON):
-        dados_padrao = [
-            {"candidato": "FELIPE", "votos": 0},
-            {"candidato": "GONZALEZ", "votos": 0}
+def load_data():
+    if not os.path.exists(JSON_FILE):
+        default_data = [
+            {"candidate": "FELIPE", "votes": 0},
+            {"candidate": "GONZALEZ", "votes": 0}
         ]
-        with open(ARQUIVO_JSON, "w", encoding="utf-8") as f:
-            json.dump(dados_padrao, f, indent=4, ensure_ascii=False)
-        return dados_padrao
-    with open(ARQUIVO_JSON, "r", encoding="utf-8") as f:
+        with open(JSON_FILE, "w", encoding="utf-8") as f:
+            json.dump(default_data, f, indent=4, ensure_ascii=False)
+        return default_data
+
+    with open(JSON_FILE, "r", encoding="utf-8") as f:
         return json.load(f)
 
-def salvar_dados(dados):
-    with open(ARQUIVO_JSON, "w", encoding="utf-8") as f:
-        json.dump(dados, f, indent=4, ensure_ascii=False)
-
+def save_data(data):
+    with open(JSON_FILE, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=4, ensure_ascii=False)
 
 @app.route('/')
 def index():
-    candidatos = carregar_dados()
-    return render_template('index.html', candidatos=candidatos)
+    candidates = load_data()
+    return render_template('index.html', candidates=candidates)
 
+@app.route('/vote', methods=['POST'])
+def vote():
+    candidate_name = request.form.get('candidate')
+    candidates = load_data()
 
-@app.route('/votar', methods=['POST'])
-def votar():
-    nome_candidato = request.form.get('candidato')
-    candidatos = carregar_dados()
-    
-    for c in candidatos:
-        if c['candidato'] == nome_candidato:
-            c['votos'] += 1
+    for c in candidates:
+        if c['candidate'] == candidate_name:
+            c['votes'] += 1
             break
-            
-    salvar_dados(candidatos)
-    return redirect(url_for('index')) 
+
+    save_data(candidates)
+    return redirect(url_for('index'))
 
 if __name__ == '__main__':
     app.run(debug=True)
